@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types';
+
 const KEY = '0a29e3a518908cfc1b2eed264f85542b';
-const BASE_URL = 'https://api.themoviedb.org/';
+const BASE_URL = 'https://api.themoviedb.org/3';
 
 async function fetchWithErrorHandling(url = '', config = {}) {
   const response = await fetch(url, config);
@@ -37,3 +39,7 @@ export function fetchGetMovieReviews(movie_id) {
     `${BASE_URL}/movie/${movie_id}/reviews?api_key=${KEY}&language=en-US&page=1`
   );
 }
+
+fetchGetMovieCredits.propTypes = {
+  id: PropTypes.number.isRequired,
+};

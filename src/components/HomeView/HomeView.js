@@ -12,9 +12,14 @@ export default function HomeView() {
     });
   }, []);
 
+  const toDay = new Date().toLocaleDateString();
+
   return (
     <>
-      <Title>{movieList && <MovieList list={movieList} />}</Title>
+      <Title>
+        Trending today: {toDay}
+        {movieList && <MovieList list={movieList} />}
+      </Title>
     </>
   );
 }
