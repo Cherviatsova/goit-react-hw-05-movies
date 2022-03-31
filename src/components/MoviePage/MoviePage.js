@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import MovieList from '../MovieList/MovieList';
 import { useEffect, useState } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
