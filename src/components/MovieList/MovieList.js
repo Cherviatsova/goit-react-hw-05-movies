@@ -17,7 +17,6 @@ export default function MovieList({ list }) {
               }}
             >
               {name ? name : title}
-              {title}
             </Link>
           </li>
         ))}
